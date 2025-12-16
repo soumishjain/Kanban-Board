@@ -107,7 +107,7 @@ let description = desc.value;
     desc.value = "";
 }
 
-addtask.addEventListener('click',addingnewtask());
+addtask.addEventListener('click',addingnewtask);
 
 bg.addEventListener('click',() => {
     modal.classList.remove('active');
