@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <main>
+        <nav>
+            <div class="left">KANBAN</div>
+            <div class="right"><button class="addnewtask">Add New Task</button></div>
+        </nav>
+        <section class="board">
+            <div id="todo" class="task-column">
+                <div class="heading">
+                    <div class="left">To Do</div>
+                    <div class="right">Count</div>
+                </div>
+            </div>
+            <div id="progress" class="task-column">
+                <div class="heading">
+                    <div class="left">In Progess</div>
+                    <div class="right">Count</div>
+                </div></div>
+            <div id="done" class="task-column">
+                <div class="heading">
+                    <div class="left">Done</div>
+                    <div class="right">Count</div>
+                </div></div>
+        </section>
+    </main>
+    <div class="modal">
+        <button class="cancel"><i class="ri-close-fill"></i></button>
+        <div class="bg"></div>
+        <div class="center">
+            <input spellcheck="false" id="title" type="text" placeholder="Task Title">
+            <textarea id="description" spellcheck="false" placeholder="Task Description"></textarea>
+            <button class="addtask">Add Task</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

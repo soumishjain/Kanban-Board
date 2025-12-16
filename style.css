@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+html{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root{
+    /* bg colors */
+    --secondary-bg: #111;
+    --primary-bg: #000;
+    /* padding */
+    --padding-xs: 5px;
+    --padding-s: 10px;
+    --padding-m: 15px;
+    --padding-l: 20px;
+    --padding-xl: 25px;
+    --padding-2xl: 30px;
+    /* text color */
+    --primary-tc: whitesmoke;
+    /* margin */
+    --margin-xs: 5px;
+    --margin-s: 10px;
+    --margin-m: 15px;
+    --margin-l: 20px;
+    --margin-xl: 25px;
+    --margin-2xl: 30px;
+    /* gaps */
+    --gap-xs: 5px;
+    --gap-s: 10px;
+    --gap-m: 15px;
+    --gap-l: 20px;
+    --gap-xl: 25px;
+    --gap-2xl: 30px;
+    --gap-3xl: 35px;
+}
+main{
+    width: 100%;
+    height: 100%;
+    background: var(--primary-bg);
+    padding: var(--padding-l);
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    color: var(--primary-tc);
+    display: flex;
+    justify-content: space-between;
+}
+nav .right button{
+    border: none;
+    padding: var(--padding-s) var(--padding-m);
+    outline: none;
+    background: #555;
+    font-weight: 700;
+    border-radius: 5px;
+    color: var(--primary-tc);
+    cursor: pointer;
+}
+.board{
+    display: flex;
+    justify-content: space-between;
+    margin: var(--margin-l);
+    gap: var(--gap-xl);
+    flex-grow: 1;
+    padding: var(--padding-l);
+    overflow: hidden;
+}
+.task-column{
+    background-color: var(--secondary-bg);
+    width: 35%;
+    border-radius: 5px;
+    padding: var(--padding-s);
+    color: var(--primary-tc);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m);
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    stroke-width: none;
+}
+.task-column::-webkit-scrollbar{
+    width: 0;
+    display: none;
+}
+.task-column .heading{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+section .hover-over{
+    border: 2px dashed whitesmoke;
+    scale: 1.05;
+}
+.task-column .task{
+    background: #222;
+    padding: var(--padding-xs);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    cursor: grab;
+}
+.task button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: var(--padding-xs) var(--padding-s);
+    border-radius: 5px;
+    background: rgb(212, 49, 82);
+    color: whitesmoke;
+    align-self: flex-end;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(57, 57, 57, 0.508);
+    backdrop-filter: blur(2px);
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.modal.active{
+    display: flex;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.center input , .center textarea{
+    border: none;
+    background-color: #333;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 5px;
+}
+
+.center #title{
+    padding: 10px 20px;
+}
+.center textarea{
+    padding: 20px 20px;
+    font-size: 14px;
+    resize: none;
+    overflow: hidden;
+}
+.center{
+    background: #1e1e1e;
+    padding: 50px 40px;
+    border-radius: 10px;
+    z-index: 10;
+}
+.center .addtask{
+    border: none;
+    padding: var(--padding-s) var(--padding-m);
+    outline: none;
+    background: #555;
+    font-weight: 700;
+    border-radius: 5px;
+    color: var(--primary-tc);
+    cursor: pointer;
+}
+.cancel{
+    position: absolute;
+    top: 7%;
+    right: 5%;
+    outline: none;
+    background: transparent;
+    border: none;
+    color: whitesmoke;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 15;
+}
+.cancel:hover{
+    scale: 1.5;
+}
+.bg{
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    position: absolute;
+}
