@@ -199,3 +199,12 @@ section .hover-over{
     z-index: 5;
     position: absolute;
 }
+
+@media(max-width: 480px){
+    .board{
+        flex-direction: column;
+    }
+    .task-column{
+        width: 100%;
+    }
+}
