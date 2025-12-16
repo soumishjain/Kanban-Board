@@ -95,7 +95,11 @@ nav .right button{
 .task-column .heading{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background-color: var(--secondary-bg);
+    transform: translateY(-25%);
+    padding: 10px;
 }
 section .hover-over{
     border: 2px dashed whitesmoke;
